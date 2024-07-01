@@ -55,7 +55,7 @@ Ta-da! The extension has been successfully installed. Look for a black Instagram
 - Click on the logo for the IG Scraper. This is easy to do if you've pinned the extension.
 > [!NOTE]
 > Need help pinning the extension? Click on the Puzzle icon in the top right corner of your browser, and find the IG Scraper extension in your Extensions list and click on it. Set your own settings, like the delay inbetween requests. A higher delay will lower the odds that your account will be suspended, but it will mean that the scrape will take longer. How long is based on a multiplier of the followers/followings and the delay set. The delay is in milliseconds. So 1000 milliseconds equates to 1 second. Again I do not know what a good delay is.
-- When it is finished, it will ask you to save a JSON file containing the data. This is a bones text file with the scraped data formatted above at the top of this document. It has some metadata about the details of the scraping, and it has an array, or list, of the follower's username and display name.
+- When it is finished, it will ask you to save a JSON file containing the data. This is a bare bones text file with the scraped data formatted above at the top of this document. It has some metadata about the details of the scraping, and it has an array, or list, of the follower's username and display name.
   
 > [!WARNING]
 > **Make sure that the tab stays in the foreground while the code scrapes.** Just have a standalone window for the scrapes to run in while you browse and do whatever you want in another window. Just make sure it doesn't get backgrounded. You can check the Network tab in Dev Tools to see the Instagram queries running.
