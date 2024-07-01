@@ -76,10 +76,7 @@ Ta-da! The extension has been successfully installed. Look for a black Instagram
 https://github.com/SocialMediaTooling/IG_Follower_Scraper/assets/173634644/d1d1601b-9e57-4598-9315-5169c83f0729
 
 
-For accounts between 1k-20k followers/followings it can take a few minutes or more depending on your internet connectivity and the delay. Video ends with us saving the file and opening it to look at the metadata collected.
-
-> [!NOTE]
-> **Add a delay** in the Extension options to try to prevent your accounts being suspended. I don't know the ideal time yet. In the video I demo a 1s delay. I sped the video up greatly but the actual scrape in this demo took a few minutes of letting these queries run.
+For accounts between 1k-20k followers/followings it can take a few minutes or more depending on your internet connectivity and the delay. In the video I demo a 1s delay. I sped the video up greatly but the actual scrape in this demo took a few minutes of letting these queries run. Video ends with us saving the file and opening it to look at the metadata collected.
  
 > [!NOTE]
 > If you want to ignore scraping the followers or followings for an account, you can specify that with the checkboxes in the dropdown after clicking on the IG Scraper extension. Those fields will show up as empty in the JSON file and those queries won't run so it'll be quicker.
