@@ -54,7 +54,8 @@ Ta-da! The extension has been successfully installed. Look for a black Instagram
 - Navigate to the user's Instagram profile that you would like to scrape
 - Click on the logo for the IG Scraper. This is easy to do if you've pinned the extension.
 > [!NOTE]
-> Need help pinning the extension? Click on the Puzzle icon in the top right corner of your browser, and find the IG Scraper extension in your Extensions list and click on it. Set your own settings, like the delay inbetween requests. A higher delay will lower the odds that your account will be suspended, but it will mean that the scrape will take longer. How long is based on a multiplier of the followers/followings and the delay set. The delay is in milliseconds. So 1000 milliseconds equates to 1 second. Again I do not know what a good delay is.
+> Need help pinning the extension? Click on the Puzzle icon in the top right corner of your browser, and find the IG Scraper extension in your Extensions list and click the pin icon. From there, you can interact with the Chrome extension by simply clicking on the extension's logo.
+- Set your own settings, like the delay inbetween requests. A higher delay will lower the odds that your account will be suspended, but it will mean that the scrape will take longer. How long is based on a multiplier of the followers/followings and the delay set. The delay is in milliseconds. So 1000 milliseconds equates to 1 second. Again I do not know what a good delay is.
 - When it is finished, it will ask you to save a JSON file containing the data. This is a bare bones text file with the scraped data. It has some metadata about the details of the scraping, and it has an array, or list, of the follower/followings's usernames and display names.
   
 > [!WARNING]
