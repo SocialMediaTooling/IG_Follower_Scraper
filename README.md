@@ -27,7 +27,7 @@ You can use this data to create maps and stuff.
 > **You need to be signed into Instagram** because of restrictions that they have placed on their public-facing API. It just won't work if you're logged out in that tab.
 
 > [!WARNING]
-> **Your account could be suspended for using this code** so make sure to use an account that you do not care about losing. **Set a delay** in this extension's settings to help avoid this. Instructions are at the end of this document.
+> **Your account could be suspended for using this code**. **Set a delay** in this extension's settings to help avoid this. Instructions are at the end of this document.
 
 > [!CAUTION]
 > **I am not sure if this extension can handle accounts with 500k+ followers.** The reason being that Instagram might suspend your account mid-way through. If you need a scrape like that, try setting the delay to a high number. Again, instructions below! It will take some time, but it might work. I haven't tried it.
