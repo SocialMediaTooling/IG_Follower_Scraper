@@ -1,0 +1,23 @@
+{
+    "name": "Instagram scraper",
+    "description": "Scrapes the following/followers for an account",
+    "version": "1.0",
+    "manifest_version": 3,
+    "action": {
+      "default_popup": "index.html",
+      "default_icon": "logo.png"
+    },
+    "background": {
+      "service_worker": "src/background.js",
+      "type": "module"
+    },
+    "content_scripts": [
+      {
+        "matches": ["https://*.instagram.com/*/"],
+        "run_at": "document_start",
+        "js": ["src/scraper.js"]
+      }
+    ],
+    "host_permissions": ["https://*/*"],
+    "permissions": ["storage", "offscreen", "declarativeContent", "activeTab", "tabs", "scripting", "downloads", "background"]
+  }
