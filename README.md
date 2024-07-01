@@ -50,7 +50,7 @@ You can use this data to create maps and stuff.
 Ta-da! The extension has been successfully installed. Look for a black Instagram logo in your extensions by clicking on the Puzzle icon, and **pin it for easier access**.
 
 ## How to use
-- Log into Instagram using an account that you are okay to lose
+- Log into Instagram
 - Navigate to the user's Instagram profile that you would like to scrape
 - Click on the logo for the IG Scraper. This is easy to do if you've pinned the extension.
 > [!NOTE]
