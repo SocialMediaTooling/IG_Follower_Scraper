@@ -2,6 +2,12 @@
  * Handles your preferences like query delay
  */
 
+async function getCurrentTab() {
+  let queryOptions = { active: true };
+  let [tab] = await chrome.tabs.query(queryOptions);
+  return tab;
+};
+
 chrome.storage.sync.get(["showFollowers", "showFollowings", "delay"], (items) => {
   const {showFollowers, showFollowings, delay} = items
   if (!showFollowers) document.getElementById('followers').click();
@@ -20,14 +26,21 @@ document.getElementById('delay').addEventListener('change', (event) => {
 })
 
 document.getElementById('form-submit').addEventListener('click', function () {
-  chrome.storage.sync.get(["showFollowers", "showFollowings", "delay"], (items) => {
+  getCurrentTab().then((tab) => {
+    // chrome.scripting.executeScript({
+    //   target: { tabId: tab.id },
+    //   files: ['src/scraper.js']
+    // });
+    chrome.storage.sync.get(["showFollowers", "showFollowings", "delay"], (items) => {
       const {showFollowers, showFollowings, delay} = items
       const scrape = {
           showFollowers,
           showFollowings,
           delay,
       };
-      chrome.runtime.sendMessage({type: 'scrape', scrape});
+      // chrome.tabs.sendMessage(tab.id, {action: 'scrape', scrape});
+      chrome.runtime.sendMessage({action: 'scrape', scrape});
   });
-});
+  }
+);});
 

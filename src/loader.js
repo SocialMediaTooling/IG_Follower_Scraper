@@ -18,6 +18,6 @@ const interval = setInterval(() => {
 // Refresh the page on completing the scrape. Helps avoid an error that occurs when running the script twice in a row without a page reload.
 chrome.runtime.onMessage.addListener(
     async function(args, sender, sendResponse) {
-      if (args.type != 'output') window.close();
+      if (args.action != 'output') window.close();
     }
 );

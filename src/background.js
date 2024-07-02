@@ -12,7 +12,7 @@
 
 chrome.runtime.onMessage.addListener(
   async function(args, sender, sendResponse) {
-    switch(args.type) {
+    switch(args.action) {
       case 'output':
         processOutput(args.output);
         break;
@@ -27,12 +27,12 @@ chrome.runtime.onMessage.addListener(
 function processScrape(scrape) {
   // Re-route the scrape to the content script
   getCurrentTab().then(({id}) => {
-    chrome.tabs.sendMessage(id, {type: 'scrape', scrape});
+    chrome.tabs.sendMessage(id, {action: 'scrape', scrape});
   })
 }
 
 async function processOutput(output) {
-  const blob = new Blob([output], {type: "application/json"});
+  const blob = new Blob([output], {action: "application/json"});
     const url = await getBlobUrl(blob);
     const outputObj = JSON.parse(output);
 
@@ -69,7 +69,7 @@ async function getBlobUrl(blob) {
 }
 
 async function getCurrentTab() {
-  let queryOptions = { active: true };
+  let queryOptions = {currentWindow: true, active : true};
   let [tab] = await chrome.tabs.query(queryOptions);
   return tab;
 };

@@ -4,7 +4,7 @@
 
 chrome.runtime.onMessage.addListener(
   async function(args, sender, sendResponse) {
-    if (args.type == 'scrape') processScrape(args.scrape);
+    if (args.action == 'scrape') processScrape(args.scrape);
 });
   
 function processScrape(args) {
@@ -107,7 +107,7 @@ function processScrape(args) {
         following: followings,
       }
       const output = JSON.stringify(finalOutput, undefined, 2);
-      chrome.runtime.sendMessage({type: 'output', output});
+      chrome.runtime.sendMessage({action: 'output', output});
   
     } catch (err) {
       console.log({ err });
