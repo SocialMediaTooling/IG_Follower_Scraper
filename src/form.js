@@ -8,6 +8,8 @@ async function getCurrentTab() {
   return tab;
 };
 
+let currentId;
+
 chrome.storage.sync.get(["showFollowers", "showFollowings", "delay"], (items) => {
   const {showFollowers, showFollowings, delay} = items
   if (!showFollowers) document.getElementById('followers').click();
@@ -24,21 +26,20 @@ document.getElementById('followings').addEventListener('change', (event) => {
 document.getElementById('delay').addEventListener('change', (event) => {
   chrome.storage.sync.set({ "delay": event.target.value });
 })
+document.getElementById('ig_id').addEventListener('change', (event) => {
+  currentId = event.target.value;
+})
 
 document.getElementById('form-submit').addEventListener('click', function () {
   getCurrentTab().then((tab) => {
-    // chrome.scripting.executeScript({
-    //   target: { tabId: tab.id },
-    //   files: ['src/scraper.js']
-    // });
     chrome.storage.sync.get(["showFollowers", "showFollowings", "delay"], (items) => {
       const {showFollowers, showFollowings, delay} = items
       const scrape = {
           showFollowers,
           showFollowings,
           delay,
+          currentId,
       };
-      // chrome.tabs.sendMessage(tab.id, {action: 'scrape', scrape});
       chrome.runtime.sendMessage({action: 'scrape', scrape});
   });
   }

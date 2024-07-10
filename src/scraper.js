@@ -8,7 +8,7 @@ chrome.runtime.onMessage.addListener(
 });
   
 function processScrape(args) {
-  const {showFollowers, showFollowings, delay} = args;
+  const {showFollowers, showFollowings, delay, currentId} = args;
   const username = window.location.href.split('/')[3];
 
   let followers = [{ username: "", full_name: "" }];
@@ -19,16 +19,7 @@ function processScrape(args) {
   
   (async () => {
     try {
-      const userQueryRes = await fetch(
-        `https://www.instagram.com/web/search/topsearch/?query=${username}`
-      );
-  
-      const userQueryJson = await userQueryRes.json();
-  
-      const userId = userQueryJson.users.map(u => u.user)
-                                        .filter(
-                                          u => u.username === username
-                                          )[0].pk;
+      const userId = currentId;
   
       let after = null;
       let has_next = true;
