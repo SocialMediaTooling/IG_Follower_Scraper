@@ -9,7 +9,7 @@ chrome.runtime.onMessage.addListener(
   
 function processScrape(args) {
   const {showFollowers, showFollowings, delay, currentId} = args;
-  const username = window.location.href.split('/')[3];
+  const username = window.location.href.split('/')[3].split('?')[0];
 
   let followers = [{ username: "", full_name: "" }];
   let followings = [{ username: "", full_name: "" }];
