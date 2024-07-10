@@ -84,7 +84,10 @@ For accounts between 1k-20k followers/followings it can take a few minutes or mo
 
 
 
+### Update
+I had to add a new field because Instagram changed their APIs recently. Use this website to get the numerical ID for the account you want to scrape and input it into the scraper's form when going to scrape in the IG ID field.
 
+https://commentpicker.com/instagram-user-id.php
 
 
 
