@@ -71,23 +71,23 @@ Ta-da! The extension has been successfully installed. Look for a black Instagram
 
 ## Demo
 > [!NOTE]
-> In this video, I use Chrome DevTools to check the Network activity. Right click -> Inspect, and make sure to look at the Network tab to watch the queries run. This serves as a progress checker. You will see the delay in action here.
+> In this video, I use Chrome DevTools to check the Network activity. Right click -> Inspect, and make sure to look at the Network tab to watch the queries run. This serves as a progress checker. You will see the delay in action here. You might have to click scrape twice idk why yet, it's a bug.
 
 
 https://github.com/SocialMediaTooling/IG_Follower_Scraper/assets/173634644/d1d1601b-9e57-4598-9315-5169c83f0729
 
 
 For accounts between 1k-20k followers/followings it can take a few minutes or more depending on your internet connectivity and the delay. In the video I demo a 1s delay. I sped the video up greatly but the actual scrape in this demo took a few minutes of letting these queries run. Video ends with us saving the file and opening it to look at the metadata collected.
+
+### Update July 10
+I had to add a new field because Instagram changed their APIs recently. Use this website to get the numerical ID for the account you want to scrape and input it into the scraper's form when going to scrape in the IG ID field.
+
+https://commentpicker.com/instagram-user-id.php
+
  
 > [!NOTE]
 > If you want to ignore scraping the followers or followings for an account, you can specify that with the checkboxes in the dropdown after clicking on the IG Scraper extension. Those fields will show up as empty in the JSON file and those queries won't run so it'll be quicker.
 
-
-
-### Update
-I had to add a new field because Instagram changed their APIs recently. Use this website to get the numerical ID for the account you want to scrape and input it into the scraper's form when going to scrape in the IG ID field.
-
-https://commentpicker.com/instagram-user-id.php
 
 
 
